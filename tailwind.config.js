@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,9 +8,14 @@ module.exports = {
   ],
   theme: {
     colors: {
-      brand: 'rgb(var(--color-brand) / <alpha-value>)',
+      ...colors,
+      brand: "rgb(var(--color-brand) / <alpha-value>)",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        headings: ["ff-market-web", ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
-}
+};

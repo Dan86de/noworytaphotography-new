@@ -9,9 +9,11 @@ const Header = () => {
     <Popover className="relative bg-white">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="flex sm:py-8 items-center justify-between">
-              <Image src={logo} width={80} alt="Noworytaphotography Logo" />
+          <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
+            <div className="flex  items-center justify-between">
+              <div className="w-16 sm:w-24">
+                <Image src={logo} width="100" alt="Noworytaphotography Logo" />
+              </div>
               <nav className="hidden md:flex gap-8">
                 <a
                   href="/home"
@@ -48,6 +50,7 @@ const Header = () => {
               )}
             </div>
           </div>
+          <Popover.Overlay className="fixed inset-0 bg-brand opacity-50" />
           <Transition
             as={Fragment}
             enter="duration-200 ease-out"
@@ -59,11 +62,13 @@ const Header = () => {
           >
             <Popover.Panel
               focus
-              className="absolute inset-x-0 top-0 origin-top-right transform  transition md:hidden "
+              className="absolute inset-x-0 top-0 origin-top-right transform transition md:hidden"
             >
-              <div className="rounded-lg bg-white shadow-lg ring-1 ring-brand ring-opacity-5 px-4 sm:px-6 sm:py-8">
+              <div className="rounded-lg bg-white shadow-lg shadow-brand ring-1 ring-brand ring-opacity-5 px-4 sm:px-6 sm:py-8">
                 <div className="flex items-center justify-between">
-                  <Image src={logo} width={80} alt="Noworytaphotography Logo" />
+                  <div className="w-16">
+                    <Image src={logo} alt="Noworytaphotography Logo" />
+                  </div>
                   <div className="-my-2 -mr-2 md:hidden">
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span className="sr-only">Open menu</span>

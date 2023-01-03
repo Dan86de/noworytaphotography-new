@@ -1,24 +1,26 @@
 import hero1 from "../public/images/hero1.png";
 import Image from "next/image";
 
+// ff-market-web font?
+
 const Hero = () => {
   return (
-    <main className="lg:relative">
-      <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
-        <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
-          <h1 className="text-4xl font-bold tracking-tight text-brand sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-            <span className="block xl:inline">
-              Lass mich deine Authentizität zeigen
-            </span>{" "}
-          </h1>
-        </div>
+    <main className="container mx-auto max-w-screen-2xl flex flex-col-reverse items-center justify-center sm:flex-row">
+      <div className="w-full tracking-tight px-4 sm:w-1/2 sm:px-6">
+        <h1 className="font-headings text-4xl font-bold text-brand mt-8 sm:mt-0 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl ">
+          Lass mich deine{" "}
+          <span className="underline-offset-2 underline underline-offset-8">
+            Authentizität{" "}
+          </span>
+          zeigen
+        </h1>
+        <h2 className="mt-6 sm:mt-12 text-2xl font-light leading-6 italic text-brand sm:text-2xl md:text-4xl lg:text-2xl xl:text-3xl ">
+          Ich beobachte sehr gern, was andere Menschen mit ihren Innenräumen
+          machen. Ich will es in der bestmöglichen Weise zeigen.
+        </h2>
       </div>
-      <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2 border-2 border-brand">
-        <Image
-          className="absolute inset-0 h-full w-full object-cover"
-          src={hero1}
-          alt="Hero Image"
-        />
+      <div className="w-full sm:w-1/2">
+        <Image src={hero1} alt="Hero image" />
       </div>
     </main>
   );
