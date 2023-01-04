@@ -28,10 +28,10 @@ const Footer = () => {
         Footer
       </h2>
       <div className="mx-auto max-w-screen-2xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-4 xl:col-span-1">
-            <Image width="50" src={logo} alt="Noworytaphotography" />
-            <p className="text-base text-gray-500">Social:</p>
+        <div className="mt-12 border-t border-brand pt-8"></div>
+        <div className="flex flex-col md:flex-row gap-12 items-center justify-between md:justify-center ">
+          <div className="space-y-4 flex flex-col justify-center items-center">
+            <p className="text-base text-brand font-bold">Instagram:</p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
@@ -45,11 +45,48 @@ const Footer = () => {
               ))}
             </div>
           </div>
+          <div className="space-y-4 flex flex-col justify-center items-center">
+            <p className="text-base text-brand font-bold">Contact:</p>
+            <div className="flex space-x-6 text-brand">
+              contact@noworytaphotography.com
+            </div>
+          </div>
         </div>
-        <div className="mt-12 border-t border-brand pt-8">
-          <p className="text-base text-brand xl:text-center">
-            &copy; 2023 Noworytaphotography.com.
-          </p>
+        <div className="mt-6 border-t border-brand pt-8">
+          <div className="flex flex-col">
+            <div className="flex flex-col items-center mb-4">
+              <Image width="50" src={logo} alt="Noworytaphotography" />
+            </div>
+            <p className="font-black text-brand mb-4 md:text-center text-xl">
+              &copy; 2023 Noworytaphotography.com
+            </p>
+            <div className="flex flex-col sm:flex-row gap-0 md:justify-center md:gap-5">
+              <a
+                key="#"
+                href="#"
+                className="text-brand hover:text-brand hover:opacity-90"
+              >
+                <span className="sr-only">Allgemeine Geschäftsbedingungen</span>
+                Allgemeine Geschäftsbedingungen
+              </a>{" "}
+              <a
+                key="#"
+                href="#"
+                className="text-brand hover:text-brand hover:opacity-90"
+              >
+                <span className="sr-only">Impressum</span>
+                Impressum
+              </a>{" "}
+              <a
+                key="#"
+                href="#"
+                className="text-brand hover:text-brand hover:opacity-90"
+              >
+                <span className="sr-only">Datenschutzerklärung</span>
+                Datenschutzerklärung
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
