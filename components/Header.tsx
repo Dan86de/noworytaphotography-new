@@ -11,31 +11,31 @@ const Header = () => {
         <>
           <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
             <div className="flex  items-center justify-between">
-              <div className="w-16 sm:w-24">
+              <div className="w-16 md:w-24">
                 <Image src={logo} width="100" alt="Noworytaphotography Logo" />
               </div>
-              <nav className="hidden md:flex gap-8">
+              <nav className="hidden md:flex gap-6">
                 <a
                   href="/home"
-                  className="text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
                 >
                   Home
                 </a>
                 <a
                   href="/about"
-                  className="text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
                 >
                   Über-mich
                 </a>
                 <a
                   href="/portfolio"
-                  className="text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
                 >
                   Portfolio
                 </a>
                 <a
                   href="/contact"
-                  className="text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
                 >
                   Kontakt
                 </a>
@@ -64,7 +64,7 @@ const Header = () => {
               focus
               className="absolute inset-x-0 top-0 origin-top-right transform transition md:hidden"
             >
-              <div className="rounded-lg bg-white shadow-lg shadow-brand ring-1 ring-brand ring-opacity-5 px-4 sm:px-6 sm:py-8">
+              <div className="rounded-lg bg-white shadow-lg shadow-brand ring-1 ring-brand ring-opacity-5 px-4 md:px-6 md:py-8">
                 <div className="flex items-center justify-between">
                   <div className="w-16">
                     <Image src={logo} alt="Noworytaphotography Logo" />
@@ -76,28 +76,28 @@ const Header = () => {
                     </Popover.Button>
                   </div>
                 </div>
-                <nav className="flex flex-col gap-8 py-6">
+                <nav className="flex flex-col gap-2 py-6">
                   <a
                     href="/home"
-                    className=" p-2 text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
+                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Home
                   </a>
                   <a
                     href="/about"
-                    className=" p-2 text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
+                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Über-mich
                   </a>
                   <a
                     href="/portfolio"
-                    className=" p-2 text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
+                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Portfolio
                   </a>
                   <a
                     href="/contact"
-                    className=" p-2 text-base font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
+                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Kontakt
                   </a>
