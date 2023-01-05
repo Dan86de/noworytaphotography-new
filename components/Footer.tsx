@@ -47,9 +47,12 @@ const Footer = () => {
           </div>
           <div className="space-y-4 flex flex-col justify-center items-center">
             <p className="text-base text-brand font-bold">Contact:</p>
-            <div className="flex space-x-6 text-brand">
+            <a
+              href="mailto:contact@noworytaphotography.com"
+              className="flex space-x-6 text-brand"
+            >
               contact@noworytaphotography.com
-            </div>
+            </a>
           </div>
         </div>
         <div className="mt-6 border-t border-brand pt-8">
@@ -71,7 +74,7 @@ const Footer = () => {
               </a>{" "}
               <a
                 key="#"
-                href="#"
+                href="/impressum"
                 className="text-brand hover:text-brand hover:opacity-90"
               >
                 <span className="sr-only">Impressum</span>

@@ -27,15 +27,15 @@ const AboutSection = () => {
             <p className="text-brand font-extralight tracking-tight leading-6 text-xl md:portrait:text-2xl md:portrait:tracking-tighter">
               In meiner Arbeit bemühe ich mich, jedes Detail zu beachten, weil:
             </p>
-            <h2 className="font-headings text-brand font-bold text-4xl my-8 text-center md:portrait:text-6xl md:portrait:my-10 xl:landscape:text-5xl 2xl:landscape:text-6xl 2xl:landscape:my-12">
+            <h2 className="font-headings text-brand font-bold text-4xl my-8 text-center md:portrait:text-6xl md:portrait:my-10 xl:landscape:text-5xl xl:landscape:pt-16 2xl:landscape:text-6xl 2xl:landscape:my-12">
               "der Teufel steckt im Detail"
             </h2>
           </div>
         </div>
-        <div className="relative w-screen h-[calc(100vh_-_64px)] lg:landscape:h-[80vh] xl:landscape:h-[90vh] 3xl:landscape:h-[70vh]">
+        <div className="relative w-screen aspect-square lg:landscape:h-[80vh] xl:landscape:h-[90vh] 3xl:landscape:h-[50vh] 3xl:landscape:w-100">
           <Image
             src={aboutCollage}
-            className="absolute inset-0 h-full w-full object-cover -z-10"
+            className="absolute inset-0 h-full w-full object-contain -z-10"
             alt="Hero image"
           />
         </div>
