@@ -3,7 +3,7 @@ import aboutCollage from "../public/images/kate_bw_collage.png";
 
 const AboutSection = () => {
   return (
-    <section className="container mx-auto max-w-screen-2xl">
+    <section className="container mx-auto max-w-screen-2xl" id="about">
       <div className="px-4">
         <h2 className="hidden font-headings text-brand font-bold text-6xl lg:landscape:block lg:landscape:px-6 mt-12">
           Über-mich
@@ -35,7 +35,7 @@ const AboutSection = () => {
         <div className="relative w-screen aspect-square lg:landscape:h-[80vh] xl:landscape:h-[90vh] 3xl:landscape:h-[50vh] 3xl:landscape:w-100">
           <Image
             src={aboutCollage}
-            className="absolute inset-0 h-full w-full object-contain -z-10"
+            className="absolute inset-0 h-full w-full object-scale-down -z-10"
             alt="Hero image"
           />
         </div>

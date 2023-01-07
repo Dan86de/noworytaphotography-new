@@ -1,6 +1,10 @@
+import { useRouter } from "next/router";
 export default function Impressum() {
+  const router = useRouter();
   return (
     <div className="container max-w-screen-2xl px-4 sm:px-6">
+      <span onClick={() => router.back()}>Click here to go back</span>
+
       <p>Angaben gemäß § 5 TMG</p>
       <h1 className="text-brand font-headings font-bold text-4xl">Impressum</h1>
       <h2 className="text-brand font-headings font-bold text-3xl">Kontakt:</h2>

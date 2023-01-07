@@ -3,6 +3,7 @@ import logo from "../public/images/logo_icon.png";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -14,31 +15,35 @@ const Header = () => {
               <div className="w-16 md:w-24">
                 <Image src={logo} width="100" alt="Noworytaphotography Logo" />
               </div>
-              <nav className="hidden md:flex gap-6">
-                <a
-                  href="/home"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+              <nav className="hidden md:flex gap-2">
+                <Link
+                  scroll={false}
+                  href="/"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
                 >
                   Home
-                </a>
-                <a
-                  href="/about"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                </Link>
+                <Link
+                  scroll={false}
+                  href="#about"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
                 >
                   Über-mich
-                </a>
-                <a
-                  href="/portfolio"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                </Link>
+                <Link
+                  scroll={false}
+                  href="#portfolio"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
                 >
                   Portfolio
-                </a>
-                <a
-                  href="/contact"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand"
+                </Link>
+                <Link
+                  scroll={false}
+                  href="#contact"
+                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
                 >
                   Kontakt
-                </a>
+                </Link>
               </nav>
               {!open && (
                 <div className="-my-2 -mr-2 md:hidden">
@@ -77,30 +82,35 @@ const Header = () => {
                   </div>
                 </div>
                 <nav className="flex flex-col gap-2 py-6">
-                  <a
-                    href="/home"
+                  <Popover.Button
+                    as={Link}
+                    scroll={false}
+                    href="/"
                     className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Home
-                  </a>
-                  <a
-                    href="/about"
+                  </Popover.Button>
+                  <Popover.Button
+                    as={Link}
+                    href="#about"
                     className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Über-mich
-                  </a>
-                  <a
-                    href="/portfolio"
+                  </Popover.Button>
+                  <Popover.Button
+                    as={Link}
+                    href="#portfolio"
                     className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Portfolio
-                  </a>
-                  <a
-                    href="/contact"
+                  </Popover.Button>
+                  <Popover.Button
+                    as={Link}
+                    href="#contact"
                     className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
                   >
                     Kontakt
-                  </a>
+                  </Popover.Button>
                 </nav>
               </div>
             </Popover.Panel>
