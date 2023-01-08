@@ -1,21 +1,38 @@
+"use client";
+
 import { useRouter } from "next/router";
 export default function Impressum() {
   const router = useRouter();
   return (
-    <div className="container max-w-screen-2xl px-4 sm:px-6">
-      <span onClick={() => router.back()}>Click here to go back</span>
+    <div className="mx-auto container max-w-screen-2xl px-4 sm:px-6 text-lg text-brand leading-loose">
+      {/*<button*/}
+      {/*  className="hidden md:inline-flex items-center justify-center rounded-md bg-brand p-2 text-white border-2 border-brand hover:bg-white hover:text-brand focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand "*/}
+      {/*  onClick={() => router.back()}*/}
+      {/*>*/}
+      {/*  Zurück*/}
+      {/*</button>*/}
 
-      <p>Angaben gemäß § 5 TMG</p>
-      <h1 className="text-brand font-headings font-bold text-4xl">Impressum</h1>
-      <h2 className="text-brand font-headings font-bold text-3xl">Kontakt:</h2>
-      <p>Immobilienfotograf Katarzyna Noworyta</p>
-      <p>E-mail: contact@noworytaphotography.com</p>
-      <p>Internet: www.noworytaphotography.com</p>
+      <p className="text-right text-brand">Angaben gemäß § 5 TMG</p>
+      <h1 className="text-brand font-headings text-4xl text-center">
+        Impressum
+      </h1>
+      <h2 className="text-brand font-headings font-bold text-4xl mt-8">
+        Kontakt:
+      </h2>
 
-      <h2 className="text-brand font-headings font-bold text-3xl">
+      <strong>Immobilienfotograf Katarzyna Noworyta</strong>
+
+      <p>
+        <strong>E-mail:</strong> contact@noworytaphotography.com
+      </p>
+      <p>
+        <strong>Internet:</strong> www.noworytaphotography.com
+      </p>
+
+      <h2 className="text-brand font-headings font-bold text-4xl mt-8">
         Haftungsausschluss:
       </h2>
-      <h2 className="text-brand font-headings font-bold text-3xl">
+      <h2 className="text-brand font-headings font-bold text-4xl mt-8">
         Haftung für Inhalte
       </h2>
       <p>
@@ -34,7 +51,7 @@ export default function Impressum() {
         entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
         entfernen.
       </p>
-      <h2 className="text-brand font-headings font-bold text-3xl">
+      <h2 className="text-brand font-headings font-bold text-4xl mt-8">
         Haftung für Links
       </h2>
       <p>
@@ -49,7 +66,7 @@ export default function Impressum() {
         Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden
         von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
       </p>
-      <h2 className="text-brand font-headings font-bold text-3xl">
+      <h2 className="text-brand font-headings font-bold text-4xl mt-8">
         Urheberrecht
       </h2>
       <p>

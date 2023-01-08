@@ -1,49 +1,61 @@
 import Image from "next/image";
 import logo from "../public/images/logo_icon.png";
-import { Popover, Transition } from "@headlessui/react";
+import { Menu, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+
+const MenuItems = [
+  {
+    label: "Home",
+    url: "/",
+    active: true,
+  },
+  {
+    label: "Über mich",
+    url: "#about",
+    active: false,
+  },
+  {
+    label: "Portfolio",
+    url: "#portfolio",
+    active: false,
+  },
+  {
+    label: "Kontakt",
+    url: "#contact",
+    active: true,
+  },
+];
 
 const Header = () => {
+  const [activeSection, setActiveSection] = useState("/");
   return (
     <Popover className="relative bg-white">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-screen-2xl px-4 sm:px-6">
             <div className="flex  items-center justify-between">
-              <div className="w-16 md:w-24">
+              <Link href="/" className="w-16 md:w-24">
                 <Image src={logo} width="100" alt="Noworytaphotography Logo" />
-              </div>
+              </Link>
               <nav className="hidden md:flex gap-2">
-                <Link
-                  scroll={false}
-                  href="/"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
-                >
-                  Home
-                </Link>
-                <Link
-                  scroll={false}
-                  href="#about"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
-                >
-                  Über-mich
-                </Link>
-                <Link
-                  scroll={false}
-                  href="#portfolio"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  scroll={false}
-                  href="#contact"
-                  className="font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-md p-4"
-                >
-                  Kontakt
-                </Link>
+                {MenuItems.map((item) => (
+                  <Link
+                    onClick={() => setActiveSection(item.url)}
+                    key={item.url}
+                    scroll={false}
+                    href={item.url}
+                    className={`decoration-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand rounded-md p-4 ${
+                      activeSection === item.url
+                        ? "underline underline-offset-4 "
+                        : ""
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </nav>
               {!open && (
                 <div className="-my-2 -mr-2 md:hidden">
@@ -82,35 +94,17 @@ const Header = () => {
                   </div>
                 </div>
                 <nav className="flex flex-col gap-2 py-6">
-                  <Popover.Button
-                    as={Link}
-                    scroll={false}
-                    href="/"
-                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
-                  >
-                    Home
-                  </Popover.Button>
-                  <Popover.Button
-                    as={Link}
-                    href="#about"
-                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
-                  >
-                    Über-mich
-                  </Popover.Button>
-                  <Popover.Button
-                    as={Link}
-                    href="#portfolio"
-                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
-                  >
-                    Portfolio
-                  </Popover.Button>
-                  <Popover.Button
-                    as={Link}
-                    href="#contact"
-                    className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl"
-                  >
-                    Kontakt
-                  </Popover.Button>
+                  {MenuItems.map((item) => (
+                    <Popover.Button
+                      key={item.url}
+                      as={Link}
+                      scroll={false}
+                      href={item.url}
+                      className="uppercase p-2 font-bold text-brand cursor-pointer focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand rounded-2xl active:underline underline-offset-2"
+                    >
+                      {item.label}
+                    </Popover.Button>
+                  ))}
                 </nav>
               </div>
             </Popover.Panel>

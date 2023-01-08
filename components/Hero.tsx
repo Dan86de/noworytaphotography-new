@@ -9,7 +9,9 @@ const Hero = () => {
       <div className="h-1/4 flex justify-center items-center lg:landscape:h-[calc(100vh_-_96px)] lg:landscape:flex-col 2xl:landscape:h-[calc(75vh_-_64px)] 3xl:landscape:h-[calc(50vh_-_64px)]">
         <h1 className="px-2 font-headings font-bold text-brand text-center text-3xl md:portrait:text-5xl lg:portrait:text-6xl lg:landscape:text-6xl">
           Lass mich deine{" "}
-          <span className="underline underline-offset-8">Authentizität </span>
+          <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-brand relative inline-block mx-1">
+            <span className="relative text-white">Authentizität</span>
+          </span>{" "}
           zeigen
         </h1>
         {/*<h2 className="hidden lg:landscape:block">*/}

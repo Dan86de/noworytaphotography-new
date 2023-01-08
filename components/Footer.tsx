@@ -2,6 +2,7 @@ import logo from "../public/images/logo_icon.png";
 import Image from "next/image";
 import { JSXElement } from "@typescript-eslint/types/dist/generated/ast-spec";
 import { SVGProps } from "react";
+import Link from "next/link";
 
 const navigation = {
   social: [
@@ -28,10 +29,12 @@ const Footer = () => {
         Footer
       </h2>
       <div className="mx-auto max-w-screen-2xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="mt-12 border-t border-brand pt-8"></div>
-        <div className="flex flex-col md:flex-row gap-12 items-center justify-between md:justify-center ">
+        <div className=" sm:mt-12 border-t border-brand sm:pt-8"></div>
+        <div className="flex flex-col md:flex-row sm:gap-12 items-center justify-between md:justify-center ">
           <div className="space-y-4 flex flex-col justify-center items-center">
-            <p className="text-base text-brand font-bold">Instagram:</p>
+            <p className="hidden sm:block font-headings sm:text-3xl text-brand font-bold">
+              Instagram:
+            </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
@@ -40,16 +43,21 @@ const Footer = () => {
                   className="text-brand hover:text-brand hover:opacity-90"
                 >
                   <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                  <item.icon
+                    className="h-8 w-8 sm:h-10 sm:w-10"
+                    aria-hidden="true"
+                  />
                 </a>
               ))}
             </div>
           </div>
           <div className="space-y-4 flex flex-col justify-center items-center">
-            <p className="text-base text-brand font-bold">Contact:</p>
+            <p className="hidden sm:block font-headings sm:text-3xl text-brand font-bold">
+              Contact:
+            </p>
             <a
               href="mailto:contact@noworytaphotography.com"
-              className="flex space-x-6 text-brand"
+              className="text-lg sm:text-xl flex space-x-6 text-brand font-bold tracking-wide"
             >
               contact@noworytaphotography.com
             </a>
@@ -57,37 +65,40 @@ const Footer = () => {
         </div>
         <div className="mt-6 border-t border-brand pt-8">
           <div className="flex flex-col">
-            <div className="flex flex-col items-center mb-4">
+            <Link href="/" className="flex flex-col items-center sm:mb-4">
               <Image width="50" src={logo} alt="Noworytaphotography" />
-            </div>
-            <p className="font-black text-brand mb-4 md:text-center text-xl">
+            </Link>
+            <Link
+              href="/"
+              className="font-black text-brand mb-4 md:text-center text-sm text-center font-black"
+            >
               &copy; 2023 Noworytaphotography.com
-            </p>
-            <div className="flex flex-col sm:flex-row gap-0 md:justify-center md:gap-5">
-              <a
+            </Link>
+            <div className="flex flex-col sm:flex-row gap-0 md:justify-center md:gap-5 mt-4">
+              <Link
                 key="#"
-                href="#"
+                href="/agb"
                 className="text-brand hover:text-brand hover:opacity-90"
               >
                 <span className="sr-only">Allgemeine Geschäftsbedingungen</span>
                 Allgemeine Geschäftsbedingungen
-              </a>{" "}
-              <a
+              </Link>{" "}
+              <Link
                 key="#"
                 href="/impressum"
                 className="text-brand hover:text-brand hover:opacity-90"
               >
                 <span className="sr-only">Impressum</span>
                 Impressum
-              </a>{" "}
-              <a
+              </Link>{" "}
+              <Link
                 key="#"
-                href="#"
+                href="/datenschutz"
                 className="text-brand hover:text-brand hover:opacity-90"
               >
                 <span className="sr-only">Datenschutzerklärung</span>
                 Datenschutzerklärung
-              </a>
+              </Link>
             </div>
           </div>
         </div>
