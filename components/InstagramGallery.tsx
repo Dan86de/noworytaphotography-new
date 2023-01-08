@@ -161,16 +161,17 @@ const InstagramGallery = () => {
       <h1 className="hidden font-headings text-brand font-bold text-6xl lg:landscape:block mt-12">
         Portfolio
       </h1>
-      <div className="grid gap-4 grid-cols-1 mt-12 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-4 grid-cols-1 mt-12 md:grid-cols-3 lg:grid-cols-4 items-center">
         {data.map((data) => (
-          <Image
-            className="aspect-square object-cover object-center"
-            key={data.id}
-            width={400}
-            height={400}
-            src={data.media_url}
-            alt={data.caption}
-          />
+          <div key={data.id} className="relative w-full aspect-square">
+            <Image
+              className="absolute inset-0 h-full w-full object-cover"
+              width={500}
+              height={500}
+              src={data.media_url}
+              alt={data.caption}
+            />
+          </div>
         ))}
       </div>
     </section>
