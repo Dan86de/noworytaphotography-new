@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import hero1 from "../public/images/hero1.png";
 
 interface Data {
   id: string;
@@ -11,6 +10,7 @@ interface Data {
   timestamp: string;
 }
 
+//INFO data for portfolio images:
 const exampleData: { data: Data[] } = {
   data: [
     {
