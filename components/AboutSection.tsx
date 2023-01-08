@@ -32,10 +32,10 @@ const AboutSection = () => {
             </h2>
           </div>
         </div>
-        <div className="relative w-screen aspect-square lg:landscape:h-[80vh] xl:landscape:h-[90vh] 3xl:landscape:h-[50vh] 3xl:landscape:w-100">
+        <div className="relative w-full aspect-square lg:landscape:h-[80vh] xl:landscape:h-[90vh] 3xl:landscape:h-[50vh] 3xl:landscape:w-100">
           <Image
             src={aboutCollage}
-            className="absolute inset-0 h-full w-full object-contain  -z-10"
+            className="absolute inset-0 h-full w-full object-contain -z-10"
             alt="Hero image"
           />
         </div>
