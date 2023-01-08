@@ -161,7 +161,7 @@ const InstagramGallery = () => {
       <h1 className="hidden font-headings text-brand font-bold text-6xl lg:landscape:block mt-12">
         Portfolio
       </h1>
-      <div className="grid gap-4 grid-cols-1 mt-12 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-4 grid-cols-1 mt-12 md:grid-cols-3 lg:grid-cols-4 items-center">
         {data.map((data) => (
           <Image
             className="aspect-square object-cover object-center"
