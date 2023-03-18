@@ -14,12 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
   useSmoothScroll();
   return (
     <>
-      <style jsx global>{`
-        html {
-          font-family: ${montserrat.style.fontFamily};
-        }
-      `}</style>
-      <Layout>
+      
+      <Layout className={`${montserrat.variable}`}>
         <Component {...pageProps} />
       </Layout>
     </>

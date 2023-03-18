@@ -2,12 +2,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
-// {
-//   family: `Montserrat`,
-//       subsets: [`latin-ext`],
-//     variants: [`300`, `400`, `700`],
-// },
-
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
