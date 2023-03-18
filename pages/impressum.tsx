@@ -21,8 +21,8 @@ export default function Impressum() {
       </h2>
 
       <strong>Immobilienfotograf Katarzyna Noworyta</strong>
-      <strong>Grungurtelstr. 10</strong>
-      <strong>50996, Koeln</strong>
+      <p><strong>Grungurtelstr. 10</strong></p>
+      <p><strong>50996, Koeln</strong></p>
       <p>
         <strong>Steuernummer:</strong> 219/5240/3581
       </p>
