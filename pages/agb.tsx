@@ -159,7 +159,8 @@ const AGB = () => {
 
         <ol className="list-decimal">
           <li>
-            Jegliche Haftung der Fotografin ist ausgeschlossen, sofern sie den Schaden nicht vorsätzlich verursacht hat.
+            Jegliche Haftung der Fotografin ist ausgeschlossen, sofern sie den Schaden nicht vorsätzlich oder grob
+            fahrlässig verursacht hat.
           </li>
           <li>
             Eine Haftung der Fotografin besteht in folgenden Fällen nicht: Nichtgefallen der Aufnahmen durch den
